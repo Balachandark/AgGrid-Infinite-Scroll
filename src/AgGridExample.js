@@ -14,13 +14,10 @@ export const GridExample = () => {
     setGridApi(params.api);
     setGridColumnApi(params.columnApi);
 
-    const httpRequest = new XMLHttpRequest();
     const updateData = (data) => {
       var dataSource = {
         rowCount: null,
         getRows: function (params) {
-          console.log(params);
-          console.log('asking for ' + params.startRow + ' to ' + params.endRow);
           setTimeout(function () {
             var rowsThisPage = data.slice(params.startRow, params.endRow);
             var lastRow = -1;
