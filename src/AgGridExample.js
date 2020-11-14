@@ -7,12 +7,12 @@ import '@ag-grid-community/core/dist/styles/ag-theme-alpine.css';
 import FakeServerData from './data.json';
 
 export const GridExample = () => {
-  const [gridApi, setGridApi] = useState(null);
-  const [gridColumnApi, setGridColumnApi] = useState(null);
+  // const [gridApi, setGridApi] = useState(null);
+  // const [gridColumnApi, setGridColumnApi] = useState(null);
 
   const onGridReady = (params) => {
-    setGridApi(params.api);
-    setGridColumnApi(params.columnApi);
+    // setGridApi(params.api);
+    // setGridColumnApi(params.columnApi);
 
     const updateData = (data) => {
       var dataSource = {
@@ -45,11 +45,6 @@ export const GridExample = () => {
       >
         <AgGridReact
           modules={[InfiniteRowModelModule]}
-          defaultColDef={{
-            flex: 1,
-            resizable: true,
-            minWidth: 100,
-          }}
           components={{
             loadingRenderer: function (params) {
               if (params.value !== undefined) {
@@ -59,14 +54,14 @@ export const GridExample = () => {
               }
             },
           }}
-          rowBuffer={0}
-          rowSelection={'multiple'}
+          // rowBuffer={0}
+          // rowSelection={'multiple'}
           rowModelType={'infinite'}
-          paginationPageSize={100}
-          cacheOverflowSize={2}
-          maxConcurrentDatasourceRequests={1}
-          infiniteInitialRowCount={1000}
-          maxBlocksInCache={10}
+          // paginationPageSize={100}
+          // cacheOverflowSize={2}
+          // maxConcurrentDatasourceRequests={1}
+          // infiniteInitialRowCount={1000}
+          // maxBlocksInCache={10 }
           onGridReady={onGridReady}
           cacheBlockSize={10}
         >
